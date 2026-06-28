@@ -1,4 +1,4 @@
-window.PROFILES = [
+export const profiles = [
   {
     id: 1,
     name: 'Zephaniah Raye Belmis',

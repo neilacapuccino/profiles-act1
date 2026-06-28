@@ -46,12 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('profile-list');
   if(!container) return;
 
-  // Names 
-  const profiles = [
-    new ProfileCard({ id: 1, name: 'Zephaniah Raye Belmis', href: 'profile-1/index.html' }),
-    new ProfileCard({ id: 2, name: 'Nherf Rossel Gempasao', href: 'profile-2/index.html' }),
-    new ProfileCard({ id: 3, name: 'Denver Neil Alejandro', href: 'profile-3/index.html' }),
-  ];
+  const profiles = Array.isArray(window.PROFILES) ? window.PROFILES.map(profile => new ProfileCard(profile)) : [];
 
   profiles.map(p => p.render()).forEach(el => container.appendChild(el));
 });

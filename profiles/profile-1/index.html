@@ -5,11 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../styles.css" />
+  <style>
+    body {
+      text-align: center;
+      font-size: 40px;
+      font-family: 'Times New Roman', Times, serif;
+      background-color: antiquewhite;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    select {
+      padding: 10px;
+      margin: 30px;
+      font-size: 25px;
+      font-family: 'Times New Roman', Times, serif;
+      border-radius: 50px;
+      border: 2px solid #333;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .container {
+      display: flex;
+      background-color: white;
+      padding: 25px;
+      border-radius: 30px;
+      border: 2px solid #333;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      gap: 40px;
+      width: 80%;
+      min-height: 250px;
+      align-items: center;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+    }
+    .info h2 {
+      margin: 10px 0 5px;
+    }
+    .info p {
+      margin: 0 0 15px;
+      font-size: 15px;
+    }
+    .section {
+      display: none;
+      width: 100%;
+      display: none;
+      justify-content: center;
+    }
+  </style>
 </head>
 <body>
-  <div class="page-profile">
-    <a class="close-btn" href="../../index.html" aria-label="Close">✕</a>
-    <div class="canvas"></div>
+  <div class="wrapper">
+    <select name="about_me" id="about_me" onchange="showSection(this.value)">
+      <option value="hobbies">Hobbies</option>
+      <option value="retroperspective">Retroperspective</option>
+    </select>
+
+    <div id="hobbies" class="section">
+      <div class="container">
+        <div class="info">
+          <h2 style="text-align: center;">Hobbies</h2>
+          <ul>
+            <li>I love reading novels</li>
+            <li>I enjoy window shopping</li>
+            <li>I'm passionate about learning to cook new cuisines.</li>
+            <li>I like biking</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="retroperspective" class="section">
+      <div class="container">
+        <div class="info">
+          <h2 style="text-align: center;">Retroperspective</h2>
+          <ul>
+            <li>Start working on tasks as soon as they are assigned.</li>
+            <li>Manage your time wisely.</li>
+            <li>ncdn</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <script>
+    function showSection(value) {
+      document.querySelectorAll('.section').forEach(el => el.style.display = 'none');
+      document.getElementById(value).style.display = 'flex';
+    }
+    showSection('hobbies');
+  </script>
 </body>
 </html>
+
+

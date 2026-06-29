@@ -6,61 +6,96 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../styles.css" />
   <style>
+    @keyframes panBackground {
+      0% {
+        background-position: 0% 0%;
+      }
+      50% {
+        background-position: 100% 100%;
+      }
+      100% {
+        background-position: 0% 0%;
+      }
+    }
     body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      font-size: 40px;
-      font-family: 'Times New Roman', Times, serif;
-      background: radial-gradient(circle at top, #5b3a8a 0%, #280a3d 65%);
+      font-family: 'Inter', sans-serif; 
+      background-image: url('https://t4.ftcdn.net/jpg/05/61/44/67/360_F_561446751_J2R7WM3dqC3MpFfQXGLb2NRHLDzgh92V.jpg');
+      background-size: 120% 120%;
+      background-attachment: fixed;
+      animation: panBackground 25s ease-in-out infinite;
       color: #f3e8ff;
       margin: 0;
-      padding: 20px;
+      padding: 40px 20px;
+      min-height: 100vh;
       box-sizing: border-box;
     }
     select {
-      padding: 10px;
-      margin: 30px;
-      font-size: 25px;
-      font-family: 'Times New Roman', Times, serif;
+      padding: 12px 24px;
+      margin: 20px 0 40px 0;
+      font-size: 18px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
       border-radius: 50px;
-      border: 2px solid #524174;
-      background: rgba(255, 255, 255, 0.18);
-      color: #230d4b;
+      border: 2px solid #6c429c;
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff; /* Adjusted to white for better readability against the purple theme */
       outline: none;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+    select option {
+      background-color: #280a3d;
+      color: #f3e8ff;
     }
     .wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
+      max-width: 800px;
     }
     .container {
       display: flex;
-      background: rgba(255, 255, 255, 0.14);
-      padding: 25px;
+      background: rgba(40, 10, 61, 0.45); /* Darker purple translucent background to pop against your image */
+      padding: 35px;
       border-radius: 30px;
-      border: 2px solid rgba(196, 167, 255, 0.45);
-      box-shadow: 0 0 30px rgba(110, 57, 157, 0.18);
+      border: 2px solid rgba(196, 167, 255, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       gap: 40px;
-      width: 80%;
+      width: 100%;
       min-height: 250px;
       align-items: center;
-      backdrop-filter: blur(8px);
+      justify-content: center;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
     .info {
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: left;
+      width: 100%;
     }
     .info h2 {
-      margin: 10px 0 5px;
+      margin: 0 0 20px 0;
       color: #f8f1ff;
+      font-size: 28px;
+    }
+    .info ul {
+      margin: 0;
+      padding-left: 20px;
     }
     .info p,
     .info li {
-      margin: 0 0 15px;
-      font-size: 20px;
+      margin: 0 0 12px 0;
+      font-size: 18px;
       color: #e7daff;
+      line-height: 1.5;
     }
     .section {
       display: none;
@@ -74,12 +109,16 @@
       border: none;
       border-radius: 999px;
       padding: 12px 24px;
-      font-size: 18px;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
       cursor: pointer;
       transition: background 0.2s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
+
     .back-btn:hover {
-      background: #6f45e6;
+      background: #7a50cc;
       transform: translateY(-1px);
     }
   </style>
@@ -88,9 +127,23 @@
   <button class="back-btn" type="button" onclick="location.href='../../index.html'">Back to Home</button>
   <div class="wrapper">
     <select name="about_me" id="about_me" onchange="showSection(this.value)">
+      <option value="profile">Profile</option>
       <option value="hobbies">Hobbies</option>
       <option value="retrospective">Retrospective</option>
     </select>
+
+    <div id="profile" class="section">
+      <div class="container">
+        <div class="info">
+          <h2 style="text-align: center;">Profile</h2>
+          <p><strong>Name:</strong> Zephaniah Raye D. Belmis</p>
+          <p><strong>Age:</strong> 20</p>
+          <p><strong>Address:</strong> Brgy. Compayan, Dumangas, Iloilo</p>
+          <p><strong>Course:</strong> Bachelor of Science in Software Engineering</p>
+          <p><strong>Year Level:</strong> 2nd Year</p>
+        </div>
+      </div>
+    </div>
 
     <div id="hobbies" class="section">
       <div class="container">
@@ -125,7 +178,7 @@
       document.querySelectorAll('.section').forEach(el => el.style.display = 'none');
       document.getElementById(value).style.display = 'flex';
     }
-    showSection('hobbies');
+    showSection('profile');
   </script>
 </body>
 </html>

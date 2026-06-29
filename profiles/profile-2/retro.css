@@ -1,0 +1,53 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700&display=swap');
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem 1rem 3rem;
+  background-image: url(ddzehcl-491a30c3-068f-41d6-a328-55fe89d1a25e.gif);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 100px;
+  color: #d16d0f;
+  text-align: center;
+  font-family:'Saira', sans-serif;
+  margin: 0 0 1.2rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.retro-card {
+  width: 90%;
+  margin: 2rem auto 1.2rem;
+  padding: 0.8rem 0.9rem;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+h2 {
+  text-align: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin: 0;
+  color: #ffffff;
+  font-family:'Saira', sans-serif;
+}
+
+strong {
+  color: #c56f0c;
+}    

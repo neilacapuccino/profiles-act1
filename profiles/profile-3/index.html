@@ -3,13 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../styles.css" />
+  <title>Profile 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="page-profile">
-    <a class="close-btn" href="../../index.html" aria-label="Close">✕</a>
-    <div class="canvas"></div>
-  </div>
+  <main class="profile-page">
+    <a class="home-btn" href="../../index.html" aria-label="Back to home">Home</a>
+
+    <section class="profile-shell">
+      <header class="profile-hero">
+        <div class="profile-hero__image" aria-hidden="true"></div>
+        <div class="profile-hero__overlay"></div>
+        <div class="profile-hero__fade"></div>
+
+        <div class="profile-avatar-card">
+          <img class="profile-avatar-card__image" src="../../assets/profile-picture/player_010_256.webp" alt="Denver Neil Alejandro profile picture" />
+        </div>
+
+        <div class="profile-hero__copy">
+          <p class="profile-hero__eyebrow">Profile 03</p>
+          <h1>Denver Neil Alejandro</h1>
+          <p class="profile-hero__subtitle">Placeholder profile page layout with tabs for future content.</p>
+        </div>
+      </header>
+
+      <section class="profile-content">
+        <nav class="profile-tabs" aria-label="Profile sections">
+          <button class="profile-tab is-active" type="button" data-tab="details">Details</button>
+          <button class="profile-tab" type="button" data-tab="hobbies">Hobbies</button>
+          <button class="profile-tab" type="button" data-tab="retrospective">Retrospective</button>
+        </nav>
+
+        <div class="profile-panels">
+          <section class="profile-panel is-active" data-panel="details">
+            <h2>Details</h2>
+            <p>Placeholder space for profile details, contact information, and background notes.</p>
+            <div class="placeholder-grid">
+              <div class="placeholder-card"></div>
+              <div class="placeholder-card"></div>
+              <div class="placeholder-card"></div>
+            </div>
+          </section>
+
+          <section class="profile-panel" data-panel="hobbies">
+            <h2>Hobbies</h2>
+            <p>Placeholder space for interests, activities, and personal highlights.</p>
+            <div class="placeholder-stack">
+              <div class="placeholder-line long"></div>
+              <div class="placeholder-line medium"></div>
+              <div class="placeholder-line short"></div>
+            </div>
+          </section>
+
+          <section class="profile-panel" data-panel="retrospective">
+            <h2>Retrospective</h2>
+            <p>Placeholder space for reflections, progress notes, and future goals.</p>
+            <div class="placeholder-stack">
+              <div class="placeholder-line long"></div>
+              <div class="placeholder-line long"></div>
+              <div class="placeholder-line medium"></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

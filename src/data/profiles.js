@@ -2,7 +2,8 @@ export const profiles = [
   {
     id: 1,
     name: 'Zephaniah Raye Belmis',
-    href: 'profiles/profile-1/index.html'
+    href: 'profiles/profile-1/index.html',
+    image: 'assets/profile-picture/image.jpg'
   },
   {
     id: 2,

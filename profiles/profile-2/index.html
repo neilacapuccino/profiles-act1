@@ -47,6 +47,39 @@
 
     .link-grid {
       display: grid;
+      gap: 0.75rem;
+      justify-items: center;
+      margin-top: 1rem;
+      box-shadow: 0 0 30px rgba(110, 57, 157, 0.18);
+      border-radius: 30px;
+      padding: 25px;
+      
+    }
+
+    .link-grid.collapsed {
+      display: none;
+    }
+
+    .toggle-btn {
+      margin: 1rem auto 0;
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      background-color: #f1eaeac7;
+      color: #111;
+      font-family: 'Saira', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid #524174;
+      border-radius: 50px;
+      color: #2e2296;
+      font-family: 'Saira', sans-serif;
+      font-size: 1.25rem;
+    }
+
+    .toggle-btn:hover {
+      background-color: #8faff5;
     }
 
     div {
@@ -63,7 +96,39 @@
       width: 100%;
       background: rgba(255, 255, 255, 0.14);
     }
+
+    a {
+      text-decoration: none;
+      color: #1114ca;
+      font-size: 80px;
+      font-family: 'Saira', sans-serif;
+      font-weight: 600;
+    }
+
+    .profile-link {
+      display: flex;
+      padding: 1rem 2rem;
+      background-color: #f1eaeac7;
+
+      font-size: 1.25rem;
+      font-family: 'Saira', sans-serif;
+      font-weight: 600;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .profile-link:hover {
+      background-color: #8faff5;
+      color: #fff;
+    }
   </style>
+  <script>
+    function toggleLinks() {
+      const grid = document.getElementById('linkGrid');
+      const button = document.querySelector('.toggle-btn');
+      const isCollapsed = grid.classList.toggle('collapsed');
+      button.textContent = isCollapsed ? 'Show options' : 'Hide options';
+    }
+  </script>
 </head>
 <body>
   <button class="back-btn" type="button" onclick="location.href='../../index.html'">Back to Home</button>
@@ -73,7 +138,8 @@
       <main class="profile-links">
         <h1>Nherf Rossel Gempasao</h1>
         <p>Choose a profile page below:</p>
-        <div class="link-grid">
+        <button class="toggle-btn" type="button" onclick="toggleLinks()">Hide options</button>
+        <div class="link-grid" id="linkGrid">
           <a class="profile-link" href="hobbies.html">Hobbies</a>
           <a class="profile-link" href="retro.html">Retrospectives</a>
         </div>

@@ -49,3 +49,23 @@ strong {
   color: #ffd27a;
 }
 
+.back-btn {
+  align-self: flex-start;
+  margin: 0 0 1.5rem 1rem;
+  padding: 0.9rem 1.3rem;
+  font-family: 'Saira', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #df932a;
+  background: rgba(77, 196, 218, 0.753);
+  border: 2px solid #ffb347;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+

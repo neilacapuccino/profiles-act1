@@ -7,7 +7,8 @@ export const profiles = [
   {
     id: 2,
     name: 'Nherf Rossel Gempasao',
-    href: 'profiles/profile-2/index.html'
+    href: 'profiles/profile-2/index.html',
+    image: 'assets/profile-picture/1782830428710.JPG'
   },
   {
     id: 3,

@@ -15,6 +15,6 @@ export const profiles = [
     id: 3,
     name: 'Denver Neil Alejandro',
     href: 'profiles/profile-3/index.html',
-    image: 'assets/profile-picture/player_010_256.webp'
+    image: 'assets/profile-picture/df738a74-2051-426c-b832-63b5a46b4c08.jpg'
   }
 ];

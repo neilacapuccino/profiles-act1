@@ -46,11 +46,10 @@
       }
 
     .link-grid {
-      display: grid;
+      display: flex;
       gap: 0.75rem;
       justify-items: center;
       margin-top: 1rem;
-      box-shadow: 0 0 30px rgba(110, 57, 157, 0.18);
       border-radius: 30px;
       padding: 25px;
       
@@ -95,6 +94,9 @@
       align-items: center;
       width: 100%;
       background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      padding: 25px;
+      background-image: url();
     }
 
     a {
@@ -109,15 +111,18 @@
       display: flex;
       padding: 1rem 2rem;
       background-color: #f1eaeac7;
-      font-size: 1.25rem;
+      font-size: 1.75rem;
       font-family: 'Saira', sans-serif;
       font-weight: 600;
       transition: background-color 0.3s ease, color 0.3s ease;
+      border: 2px solid #524174;
+      border-radius: 50px;
     }
 
     .profile-link:hover {
       background-color: #8faff5;
       color: #fff;
+      border-radius: 50px;
     }
   </style>
   <script>

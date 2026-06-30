@@ -25,24 +25,32 @@
 
     .page-profile {
       display: flex; 
+      margin: 0 auto;
+      flex-direction: column;
+      background-image: url(1f9b037cb7caa4d.gif);
      }
 
     body {
       text-align: center;
       font-size: 40px;
       font-family: 'Times New Roman', Times, serif;
-      background: radial-gradient(circle at top, #104eac 0%, #280a3d 65%);
-      color: #1114ca;
+      background: radial-gradient(circle at top, #d4a41d 0%, #faa300 65%);
+      color: #1E3A8A;
       margin: 0;
       padding: 20px;
       box-sizing: border-box;
       font-family: 'Saira', sans-serif;
+      background-size: cover;
+
      }
 
-    .h1 {
-      font-size: 2.5rem;
+    h1 {
+      font-size: 90px;
       margin-bottom: 1rem;
       font-family: 'Saira', sans-serif;
+      color: #4E342E;
+      border-bottom: 2px solid #302b2b00;
+      -webkit-text-stroke: 1px #f1eaea00;
       }
 
     .link-grid {
@@ -88,15 +96,13 @@
       width: 100%;
     }
 
-    canvas {
+    .canvas {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
       background: rgba(255, 255, 255, 0.14);
-      color: #ffffff;
-      padding: 25px;
-      background-image: url();
+      color: #4E342E;
     }
 
     a {
@@ -124,6 +130,26 @@
       color: #fff;
       border-radius: 50px;
     }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      padding: 2rem;
+    }
+
+    .page-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+    }
+
+
   </style>
   <script>
     function toggleLinks() {
@@ -141,6 +167,8 @@
     <div class="canvas">
       <main class="profile-links">
         <h1>Nherf Rossel Gempasao</h1>
+        <h3>Date of Birth: October 3, 2005</h3>
+        <h3><Address>Address: Oton, Iloilo</Address></h3>
         <p>Choose a profile page below:</p>
         <button class="toggle-btn" type="button" onclick="toggleLinks()">Hide options</button>
         <div class="link-grid" id="linkGrid">

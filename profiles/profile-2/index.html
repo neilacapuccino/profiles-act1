@@ -18,6 +18,10 @@
       font-family: 'Saira', sans-serif;
       font-weight: 600;
       border-radius: 30px;
+      color: #ffb347;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(8px);
+      background: rgba(0, 0, 0, 0.62);
       }
 
     button:hover {
@@ -48,15 +52,21 @@
       background-size: cover;
       background-position: center bottom;
       background-repeat: no-repeat;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
      }
 
     h1 {
       font-size: 90px;
       margin-bottom: 1rem;
       font-family: 'Saira', sans-serif;
-      color: #4E342E;
+      color: #f5c56b;
       border-bottom: 2px solid #302b2b00;
-      -webkit-text-stroke: 1px #f1eaea00;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+      }
+
+    h3 {
+      color: #f0d8a1;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
       }
 
     .link-grid {
@@ -102,15 +112,6 @@
       width: 100%;
     }
 
-    .canvas {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.14);
-      color: #4E342E;
-    }
-
     a {
       text-decoration: none;
       color: #1114ca;
@@ -120,15 +121,17 @@
     }
 
     .profile-link {
-      display: flex;
-      padding: 1rem 2rem;
-      background-color: #f1eaeac7;
-      font-size: 1.75rem;
-      font-family: 'Saira', sans-serif;
-      font-weight: 600;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      border: 2px solid #524174;
-      border-radius: 50px;
+      width: 90%;
+      margin: 2rem auto 1.2rem;
+      padding: 0.8rem 0.9rem;
+      box-sizing: border-box;
+      background: rgba(0, 0, 0, 0.62);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(8px);
+      color: #ffb347;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
     }
 
     .profile-link:hover {
@@ -172,9 +175,8 @@
         <h1>Nherf Rossel Gempasao</h1>
         <h3>Date of Birth: October 3, 2005</h3>
         <h3>Age: 20</h3>
-        <h3><Address>Address: Oton, Iloilo</Address></h3>
-        <p>Choose a profile page below:</p>
-        <button class="toggle-btn" type="button" onclick="toggleLinks()">Hide options</button>
+        <h3>Address: Poblacion West, Oton, Iloilo</h3>
+        <h3>Course: Bachelor of Science in Software Engineering</h3>
         <div class="link-grid" id="linkGrid">
           <a class="profile-link" href="hobbies.html">Hobbies</a>
           <a class="profile-link" href="retro.html">Retrospectives</a>

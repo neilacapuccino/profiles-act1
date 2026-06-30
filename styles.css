@@ -162,3 +162,11 @@ body{
   .profile-card__avatar{ width:clamp(80px,30%,160px); }
   .profile-card__name{ font-size:1.05rem; }
 }
+
+.page-title{
+  font-size: 3rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 28px;
+}

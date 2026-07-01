@@ -113,6 +113,20 @@ body{
   line-height:1.05;
   word-break:break-word;
   max-width:90%;
+  margin-bottom:0.35rem;
+}
+
+.profile-card__name::after{
+  content:"";
+  display:block;
+  width:min(18ch, 82%);
+  height:4.4rem;
+  margin:2.5rem auto 0;
+  background:
+    linear-gradient(90deg, rgba(17,17,17,0.18), rgba(17,17,17,0.18)) 0 0 / 100% 8px no-repeat,
+    linear-gradient(90deg, rgba(17,17,17,0.14), rgba(17,17,17,0.14)) 0 19px / 84% 8px no-repeat,
+    linear-gradient(90deg, rgba(17,17,17,0.11), rgba(17,17,17,0.11)) 0 38px / 66% 8px no-repeat;
+  opacity:0.9;
 }
 
 .page-profile {
